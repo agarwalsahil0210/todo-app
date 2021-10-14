@@ -10,7 +10,9 @@ const Home = () => {
   }, []);
 
   const loadItems = async () => {
-    const result = await axios.get("http://localhost:3003/items");
+    const result = await axios.get(
+      "https://todo-app-devsnest.vercel.app/items"
+    );
     setItem(result.data.reverse());
   };
 

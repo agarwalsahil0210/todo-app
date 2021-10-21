@@ -10,16 +10,14 @@ const Home = () => {
   }, []);
 
   const loadItems = async () => {
-    const result = await axios.get(
-      "https://todo-app-devsnest.vercel.app/items"
-    );
+    const result = await axios.get("http://localhost:3003/items");
     setItem(result.data.reverse());
   };
 
   return (
     <div className="container">
       <div className="py-4">
-        <h1>Home page</h1>
+        <h1>To Dos</h1>
         <table class="table border shadow">
           <thead class="thead-dark">
             <tr>

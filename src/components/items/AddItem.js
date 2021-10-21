@@ -23,7 +23,7 @@ const AddItem = () => {
   const onSubmit = async (e) => {
     console.log("hey", e);
     e.preventDefault();
-    await axios.post("https://todo-app-devsnest.vercel.app/items", item);
+    await axios.post("http://localhost:3003/items", item);
     history.push("/");
   };
   return (
